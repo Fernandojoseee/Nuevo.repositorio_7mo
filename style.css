@@ -8,27 +8,27 @@
 :root {
     --bg-color: #121212; /* Fondo principal oscuro */
     --text-color: #ffffff; /* Texto principal blanco */
-    --primary-color: #ffea00; /* Color de acento (rojo) */
+    --primary-color: #ffbf00; /* Color de acento (amarillo) */ 
     --card-bg: #1e1e1e; /* Fondo de las tarjetas */
-    --navbar-bg: rgba(18, 18, 18, 0.8); /* Fondo del navbar con transparencia */
-    --footer-bg: #1e1e1e; /* Fondo del pie de página */
-    --input-bg: #2a2a2a; /* Fondo de los campos de formulario */
-    --luminous-shadow: 0 0 15px rgba(255, 0, 0, 0.592); /* Sombra luminosa roja */
-    --subtle-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil para tarjetas */
+    --navbar-bg: rgb(255, 213, 0); /* Fondo del navbar con transparencia */
+    --footer-bg: #ffd000; /* Fondo del pie de página */
+    --input-bg: #ffd900; /* Fondo de los campos de formulario */
+    --luminous-shadow: 0 0 15px rgb(255, 221, 0); /* Sombra luminosa roja */
+    --subtle-shadow: 0 4px 8px rgba(255, 221, 0, 0.619); /* Sombra sutil para tarjetas */
 }
 
 /* [data-theme="light"] define las variables para el tema claro.
    Cuando el body tenga este atributo, se aplicarán estos colores. */
 [data-theme="light"] {
-    --bg-color: #f9f9f9; /* Fondo principal claro */
+    --bg-color: #ffffff; /* Fondo principal claro */
     --text-color: #000000; /* Texto principal negro */
-    --primary-color: #ffee00; /* Color de acento (rojo) */
-    --card-bg: #000000; /* Fondo blanco para las tarjetas */
-    --navbar-bg: rgba(249, 249, 249, 0.8); /* Fondo del navbar claro con transparencia */
-    --footer-bg: #e9e9e9; /* Fondo claro para el pie de página */
-    --input-bg: #f0f0f0; /* Fondo claro para formularios */
-    --luminous-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Sombra roja más sutil */
-    --subtle-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra muy ligera */
+    --primary-color: #00ffbf; /* Color de acento (rojo) */
+    --card-bg: #ffffff; /* Fondo blanco para las tarjetas */
+    --navbar-bg: rgb(0, 255, 213); /* Fondo del navbar claro con transparencia */
+    --footer-bg: #02f2d2; /* Fondo claro para el pie de página */
+    --input-bg: #00ffd9; /* Fondo claro para formularios */
+    --luminous-shadow: 0 0 10px rgb(0, 255, 234); /* Sombra roja más sutil */
+    --subtle-shadow: 0 4px 8px rgba(0, 255, 225, 0.678); /* Sombra muy ligera */
 }
 
 /* =================================================================
@@ -39,7 +39,7 @@ body {
     color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* La propiedad 'transition' hace que el cambio de colores sea suave y no brusco */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .section-padding {
@@ -68,7 +68,7 @@ body {
 }
 
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5) !important;
+    border-color: rgb(255, 255, 255) !important;
 }
 
 .navbar-toggler-icon {
@@ -76,13 +76,12 @@ body {
 }
 
 /* Estilo para el botón de tema */
-#theme-toggle {
-    color: var(--text-color);
-    border-color: var(--primary-color);
+.theme-toggle {
+    color: var(--bg-color);
 }
-#theme-toggle:hover {
+.theme-toggle:hover {
     background-color: var(--primary-color);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -183,7 +182,7 @@ body {
     box-shadow: var(--luminous-shadow);
 }
 .form-control::placeholder {
-    color: #a0a0a0;
+    color: #000000;
 }
 
 /* =================================================================
